@@ -1,17 +1,23 @@
 <head>
 
 <?php
-include 'master.php';
+include 'elements/master.php';
+
+include 'elements/authenticate.php';
 ?>
 
 </head>
 
 <body>
 
-<?php include 'header.php'; ?>
+<?php include 'elements/header.php'; ?>
 
+<?php 
+	if($valid) {
+		echo "Please <a href='login.php'>Log In</a> to coninue.";
+	}
+?>
 
-
-<?php include 'footer.php'; ?>
+<?php include 'elements/footer.php'; ?>
 
 </body>
